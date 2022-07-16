@@ -5,6 +5,7 @@ export default {
     dark: '#223263',
     red: '#FB7181',
     border: '#9098B1',
+    text: '#747B93',
     white: '#ffffff',
     gray: '#C6CBDB',
   },
