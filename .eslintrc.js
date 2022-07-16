@@ -27,6 +27,7 @@ module.exports = {
     'prettier/prettier': 'error',
     camelcase: 0,
     'no-nested-ternary': 0,
+    'react/no-array-index-key': 0,
     '@typescript-eslint/camelcase': 'off',
     'react/require-default-props': 0,
     'react/no-unstable-nested-components': 0,
