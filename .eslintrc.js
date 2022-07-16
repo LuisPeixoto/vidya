@@ -28,6 +28,7 @@ module.exports = {
     camelcase: 0,
     'no-nested-ternary': 0,
     '@typescript-eslint/camelcase': 'off',
+    'react/require-default-props': 0,
     'react/no-unstable-nested-components': 0,
     'react/jsx-one-expression-per-line': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
