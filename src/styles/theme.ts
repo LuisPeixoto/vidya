@@ -1,8 +1,9 @@
 export default {
   colors: {
     primary: '#5B4486',
+    dark: '#223263',
     red: '#FB7181',
-    border: '#F5F5F5',
+    border: '#9098B1',
     white: '#ffffff',
   },
 
