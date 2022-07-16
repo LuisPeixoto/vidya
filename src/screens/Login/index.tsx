@@ -21,7 +21,7 @@ export function Login() {
       <Title>Bem vindo ao app</Title>
       <Subtitle>Faça seu login para continuar</Subtitle>
       <Form>
-        <Input placeholder="E-mail" />
+        <Input icon="email" placeholder="E-mail" />
         <InputPassword placeholder="Senha" />
         <Button title="Entrar" onPress={() => {}} />
       </Form>
