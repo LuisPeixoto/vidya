@@ -13,6 +13,7 @@ export const Container = styled.TouchableOpacity.attrs({
   position: absolute;
   bottom: 40px;
   right: 20px;
+  z-index: 1;
 `;
 
 export const Icon = styled(icon).attrs({
