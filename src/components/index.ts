@@ -2,6 +2,7 @@ import {Bullet} from './Bullet';
 import {Button} from './Button';
 import {CategoryCard} from './CategoryCard';
 import {ClientCard} from './ClientCard';
+import {Header} from './Header';
 import {ImageSlide} from './ImageSlide';
 import {Input} from './Input';
 import {InputPassword} from './InputPassword';
@@ -18,4 +19,5 @@ export {
   InputPassword,
   ProductCard,
   RegisterButton,
+  Header,
 };
