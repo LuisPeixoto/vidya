@@ -6,6 +6,7 @@ export default {
     red: '#FB7181',
     border: '#9098B1',
     white: '#ffffff',
+    gray: '#C6CBDB',
   },
 
   fonts: {
