@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {useTheme} from 'styled-components';
 
-import {Home, Login, Signup} from '../screens';
+import {Home, Login, Product, Signup} from '../screens';
 import {ListProducts} from '../screens/ListProducts';
 import {ListClients} from '../screens/ListClients';
 
@@ -64,6 +64,8 @@ export function AppRoutes() {
         }}
         component={ListClients}
       />
+
+      <Screen name="Product" component={Product} />
     </Navigator>
   );
 }
