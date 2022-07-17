@@ -19,7 +19,7 @@ export function ListClients() {
         )}
       />
 
-      <RegisterButton />
+      <RegisterButton onPress={() => navigation.navigate('ClientRegister')} />
     </Container>
   );
 }
