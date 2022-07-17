@@ -1,4 +1,6 @@
 import React from 'react';
+import {StatusBar} from 'react-native';
+import {useTheme} from 'styled-components';
 import logo from '../../../assets/images/logo.png';
 import {Button, Input, InputPassword} from '../../components';
 
@@ -15,8 +17,11 @@ import {
 } from './styles';
 
 export function Signup() {
+  const theme = useTheme();
+
   return (
     <Container>
+      <StatusBar barStyle="dark-content" backgroundColor={theme.colors.white} />
       <Image source={logo} />
       <Title>Cadastra-se</Title>
       <Subtitle>Preencha os dados abaixo</Subtitle>
