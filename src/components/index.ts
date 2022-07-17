@@ -6,8 +6,12 @@ import {Header} from './Header';
 import {ImageSlide} from './ImageSlide';
 import {Input} from './Input';
 import {InputPassword} from './InputPassword';
+import {ListClient} from './ListClient';
+import {ListProduct} from './ListProduct';
+import {ListUser} from './ListUser';
 import {ProductCard} from './ProductCard';
 import {RegisterButton} from './RegisterButton';
+import {SectionTitle} from './SectionTitle';
 
 export {
   Bullet,
@@ -20,4 +24,8 @@ export {
   ProductCard,
   RegisterButton,
   Header,
+  SectionTitle,
+  ListClient,
+  ListProduct,
+  ListUser,
 };
