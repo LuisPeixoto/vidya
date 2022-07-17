@@ -30,7 +30,7 @@ export function Header() {
       <Categories>
         <CategoryCard title="Clientes" icon="briefcase-variant" />
         <CategoryCard title="Clientes" icon="tag-multiple" />
-        <CategoryCard title="Clientes" icon="account-group" />
+        <CategoryCard title="Usuários" icon="account-group" />
       </Categories>
     </Container>
   );
