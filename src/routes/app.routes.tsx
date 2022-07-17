@@ -6,10 +6,12 @@ import {
   Client,
   ClientRegister,
   Home,
+  ItemSelect,
   Login,
   Product,
   ProductRegister,
   Signup,
+  UserRegister,
 } from '../screens';
 import {ListProducts} from '../screens/ListProducts';
 import {ListClients} from '../screens/ListClients';
@@ -19,7 +21,7 @@ export function AppRoutes() {
   const theme = useTheme();
   return (
     <Navigator
-      initialRouteName="ProductRegister"
+      initialRouteName="UserRegister"
       screenOptions={{
         headerShown: true,
         headerBackTitleVisible: false,
@@ -89,6 +91,8 @@ export function AppRoutes() {
         }}
         component={ProductRegister}
       />
+      <Screen name="ItemSelect" component={ItemSelect} />
+      <Screen name="UserRegister" component={UserRegister} />
     </Navigator>
   );
 }
