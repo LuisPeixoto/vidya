@@ -12,6 +12,7 @@ export const Container = styled.TouchableOpacity.attrs({
   border-radius: 5px;
   border-color: ${({theme}) => theme.colors.border};
   padding: 12px 4px;
+  margin-right: 16px;
 `;
 
 export const Title = styled.Text.attrs({
