@@ -6,6 +6,7 @@ import {Signup} from './Signup';
 import {Product} from './Product';
 import {Client} from './Client';
 import {ClientRegister} from './ClientRegister';
+import {ProductRegister} from './ProductRegister';
 
 Client;
 export {
@@ -17,4 +18,5 @@ export {
   Product,
   Client,
   ClientRegister,
+  ProductRegister,
 };

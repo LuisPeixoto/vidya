@@ -2,7 +2,15 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {useTheme} from 'styled-components';
 
-import {Client, Home, Login, Product, Signup} from '../screens';
+import {
+  Client,
+  ClientRegister,
+  Home,
+  Login,
+  Product,
+  ProductRegister,
+  Signup,
+} from '../screens';
 import {ListProducts} from '../screens/ListProducts';
 import {ListClients} from '../screens/ListClients';
 
@@ -11,7 +19,7 @@ export function AppRoutes() {
   const theme = useTheme();
   return (
     <Navigator
-      initialRouteName="Home"
+      initialRouteName="ProductRegister"
       screenOptions={{
         headerShown: true,
         headerBackTitleVisible: false,
@@ -67,6 +75,20 @@ export function AppRoutes() {
 
       <Screen name="Product" component={Product} />
       <Screen name="Client" component={Client} />
+      <Screen
+        name="ClientRegister"
+        options={{
+          title: 'Cadastro de Cliente',
+        }}
+        component={ClientRegister}
+      />
+      <Screen
+        name="ProductRegister"
+        options={{
+          title: 'Cadastro de Produto',
+        }}
+        component={ProductRegister}
+      />
     </Navigator>
   );
 }
