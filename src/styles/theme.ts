@@ -8,6 +8,7 @@ export default {
     text: '#747B93',
     white: '#ffffff',
     gray: '#C6CBDB',
+    grayLight: '#E3E3E4',
   },
 
   fonts: {
