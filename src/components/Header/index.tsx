@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {CategoryCard} from '../CategoryCard';
 import {
@@ -11,6 +12,7 @@ import {
 } from './styles';
 
 export function Header() {
+  const navigation = useNavigation<any>();
   return (
     <Container>
       <User>
@@ -28,8 +30,16 @@ export function Header() {
       </User>
 
       <Categories>
-        <CategoryCard title="Clientes" icon="briefcase-variant" />
-        <CategoryCard title="Clientes" icon="tag-multiple" />
+        <CategoryCard
+          title="Clientes"
+          icon="briefcase-variant"
+          onPress={() => navigation.navigate('Clients')}
+        />
+        <CategoryCard
+          title="Produtos"
+          icon="tag-multiple"
+          onPress={() => navigation.navigate('Products')}
+        />
         <CategoryCard title="Usuários" icon="account-group" />
       </Categories>
     </Container>

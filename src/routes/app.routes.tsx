@@ -3,6 +3,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {useTheme} from 'styled-components';
 
 import {Home, Login, Signup} from '../screens';
+import {ListProducts} from '../screens/ListProducts';
+import {ListClients} from '../screens/ListClients';
 
 export function AppRoutes() {
   const {Navigator, Screen} = createStackNavigator();
@@ -15,7 +17,7 @@ export function AppRoutes() {
         headerBackTitleVisible: false,
         cardShadowEnabled: false,
         headerTitleAlign: 'center',
-        headerTintColor: theme.colors.primary,
+        headerTintColor: theme.colors.white,
         headerTitleStyle: {
           fontFamily: theme.fonts.bold,
           color: theme.colors.white,
@@ -47,6 +49,20 @@ export function AppRoutes() {
         options={{
           headerShown: false,
         }}
+      />
+      <Screen
+        name="Products"
+        options={{
+          title: 'Produtos',
+        }}
+        component={ListProducts}
+      />
+      <Screen
+        name="Clients"
+        options={{
+          title: 'Clientes',
+        }}
+        component={ListClients}
       />
     </Navigator>
   );
