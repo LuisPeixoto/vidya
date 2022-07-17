@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {useTheme} from 'styled-components';
 
-import {Home, Login, Product, Signup} from '../screens';
+import {Client, Home, Login, Product, Signup} from '../screens';
 import {ListProducts} from '../screens/ListProducts';
 import {ListClients} from '../screens/ListClients';
 
@@ -51,14 +51,14 @@ export function AppRoutes() {
         }}
       />
       <Screen
-        name="Products"
+        name="ListProducts"
         options={{
           title: 'Produtos',
         }}
         component={ListProducts}
       />
       <Screen
-        name="Clients"
+        name="ListClients"
         options={{
           title: 'Clientes',
         }}
@@ -66,6 +66,7 @@ export function AppRoutes() {
       />
 
       <Screen name="Product" component={Product} />
+      <Screen name="Client" component={Client} />
     </Navigator>
   );
 }

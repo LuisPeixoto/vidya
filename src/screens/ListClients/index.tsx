@@ -1,8 +1,10 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
 import {ClientCard, RegisterButton} from '../../components';
 import {Container, Clients} from './styles';
 
 export function ListClients() {
+  const navigation = useNavigation<any>();
   return (
     <Container>
       <Clients
@@ -12,6 +14,7 @@ export function ListClients() {
           <ClientCard
             title="TESTE"
             urlImage="https://mlabs-s3-blog.s3.amazonaws.com/wp-content/uploads/2021/05/18090940/teste-ab-header.jpg"
+            onPress={() => navigation.navigate('Client', {client: item})}
           />
         )}
       />

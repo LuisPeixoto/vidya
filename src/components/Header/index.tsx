@@ -33,12 +33,12 @@ export function Header() {
         <CategoryCard
           title="Clientes"
           icon="briefcase-variant"
-          onPress={() => navigation.navigate('Clients')}
+          onPress={() => navigation.navigate('ListClients')}
         />
         <CategoryCard
           title="Produtos"
           icon="tag-multiple"
-          onPress={() => navigation.navigate('Products')}
+          onPress={() => navigation.navigate('ListProducts')}
         />
         <CategoryCard title="Usuários" icon="account-group" />
       </Categories>
