@@ -10,9 +10,9 @@ Vidya se trata de um aplicativo desenvolvido para o desafio técnico da Vidya co
 
 ## Screenshot
 
-![App Screenshot](screenshot1.png)
+![App Screenshot](Screenshot1.png)
 ![App Screenshot](screenshot2.png)
-![App Screenshot](screenshot3.png)
+![App Screenshot](Screenshot3.png)
 
 ## Bibliotecas Utilizadas
 
