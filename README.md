@@ -8,7 +8,7 @@ Vidya se trata de um aplicativo desenvolvido para o desafio técnico da Vidya co
 
 - https://drive.google.com/file/d/1FxEHGpI0_RwyQuB9Qv3CG8kLm92VO_WV/view?usp=sharing
 
-## Screenshot
+## Screenshots
 
 ![App Screenshot](Screenshot1.png)
 ![App Screenshot](screenshot2.png)
