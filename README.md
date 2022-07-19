@@ -38,11 +38,8 @@ Link do apk do aplicativo: [vidya.apk](https://github.com/LuisPeixoto/vidya/rele
 
 ```bash
 $ git clone https://github.com/LuisPeixoto/vidya.git
-```
-
 $ cd vidya
-
-````
+```
 
 ### Instalação das dependências
 
