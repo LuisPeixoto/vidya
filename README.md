@@ -40,7 +40,7 @@ Link do apk do aplicativo: [vidya.apk](https://github.com/LuisPeixoto/vidya/rele
 $ git clone https://github.com/LuisPeixoto/vidya.git
 ```
 
-$ cd ioasys-book
+$ cd vidya
 
 ````
 
