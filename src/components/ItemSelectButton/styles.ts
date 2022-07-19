@@ -3,11 +3,16 @@ import icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Platform} from 'react-native';
 
 import {TextInput as textInput} from 'react-native';
+import {boolean} from 'yup';
 import theme from '../../styles/theme';
+
+interface Props {
+  isErrored: boolean;
+}
 
 export const Container = styled.TouchableOpacity.attrs({
   activeOpacity: 0.8,
-})`
+})<Props>`
   margin: 8px 0;
   padding: 16px;
   flex-direction: row;
@@ -15,7 +20,8 @@ export const Container = styled.TouchableOpacity.attrs({
   justify-content: center;
   border-radius: 5px;
   border-width: 2px;
-  border-color: ${({theme}) => theme.colors.border};
+  border-color: ${({theme, isErrored}) =>
+    isErrored ? theme.colors.red : theme.colors.border};
 `;
 
 export const Icon = styled(icon).attrs({

@@ -7,6 +7,7 @@ import theme from '../../styles/theme';
 
 interface Props {
   isFocused: boolean;
+  isErrored: boolean;
 }
 
 export const Container = styled.View<Props>`
@@ -17,8 +18,12 @@ export const Container = styled.View<Props>`
   justify-content: center;
   border-radius: 5px;
   border-width: 2px;
-  border-color: ${({theme, isFocused}) =>
-    isFocused ? theme.colors.primary : theme.colors.border};
+  border-color: ${({theme, isFocused, isErrored}) =>
+    isFocused
+      ? theme.colors.primary
+      : isErrored
+      ? theme.colors.red
+      : theme.colors.border};
 `;
 
 export const Icon = styled(icon).attrs({
@@ -39,4 +44,11 @@ export const TextInput = styled(textInput).attrs({
   font-family: ${({theme}) => theme.fonts.medium};
   color: ${({theme, isFocused}) =>
     isFocused ? theme.colors.primary : theme.colors.dark};
+`;
+
+export const TextInputError = styled.Text`
+  font-size: 12px;
+  color: ${({theme}) => theme.colors.red};
+  font-family: ${({theme}) => theme.fonts.regular};
+  margin-top: 5px;
 `;

@@ -1,7 +1,8 @@
 import React, {useRef, useState} from 'react';
 import {ViewToken} from 'react-native';
+import {FlatList} from 'react-native-gesture-handler';
 import {Bullet} from '../Bullet';
-import {Container, Indexes, Content, Images, Image} from './styles';
+import {Container, Indexes, Content, Image} from './styles';
 
 interface Props {
   ImageUrls: string[];
@@ -16,18 +17,25 @@ export function ImageSlide({ImageUrls}: Props) {
   const [currentImage, setCurrentImage] = useState(0);
 
   const indexChanged = useRef((info: ChangeImageProps) => {
-    setCurrentImage(info.changed[0].index!);
+    const {viewableItems, changed} = info;
+    if (changed.length) {
+      setCurrentImage(changed[0].index!);
+    }
+
+    if (viewableItems.length) {
+      setCurrentImage(viewableItems[0].index!);
+    }
   });
 
   return (
     <Container>
-      <Images
+      <FlatList
         data={ImageUrls}
         keyExtractor={item => item}
         renderItem={item => (
           <Content>
             <Image
-              key={item.index}
+              key={item.item}
               source={{
                 uri: item.item,
               }}
@@ -39,9 +47,9 @@ export function ImageSlide({ImageUrls}: Props) {
         onViewableItemsChanged={indexChanged.current}
       />
       <Indexes>
-        {ImageUrls.map((_, index) => (
-          <Bullet key={index} active={currentImage === index} />
-        ))}
+        {ImageUrls.map((_, index) => {
+          return <Bullet key={_} active={currentImage === index} />;
+        })}
       </Indexes>
     </Container>
   );

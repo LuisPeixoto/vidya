@@ -4,8 +4,8 @@ import icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export const Container = styled.TouchableOpacity.attrs({
   activeOpacity: 0.9,
 })`
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   border-radius: 40px;
   justify-content: center;
   align-items: center;

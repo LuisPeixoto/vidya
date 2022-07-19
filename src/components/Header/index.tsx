@@ -13,6 +13,25 @@ import {
 
 export function Header() {
   const navigation = useNavigation<any>();
+
+  function handleNavigateToList({
+    title,
+    collection,
+  }: {
+    title: string;
+    collection: string;
+  }) {
+    navigation.navigate('List', {title, collection});
+  }
+
+  function handleNavigateToListUser() {
+    navigation.navigate('ListUser');
+  }
+
+  function handleNavigateToLogout() {
+    navigation.navigate('Login');
+  }
+
   return (
     <Container>
       <User>
@@ -26,6 +45,10 @@ export function Header() {
           <ActionButton>
             <Icon name="user" />
           </ActionButton>
+
+          <ActionButton onPress={() => handleNavigateToLogout()}>
+            <Icon name="log-out" />
+          </ActionButton>
         </Actions>
       </User>
 
@@ -33,14 +56,22 @@ export function Header() {
         <CategoryCard
           title="Clientes"
           icon="briefcase-variant"
-          onPress={() => navigation.navigate('ListClients')}
+          onPress={() =>
+            handleNavigateToList({title: 'Clientes', collection: 'clients'})
+          }
         />
         <CategoryCard
           title="Produtos"
           icon="tag-multiple"
-          onPress={() => navigation.navigate('ListProducts')}
+          onPress={() =>
+            handleNavigateToList({title: 'Produtos', collection: 'products'})
+          }
         />
-        <CategoryCard title="Usuários" icon="account-group" />
+        <CategoryCard
+          title="Usuários"
+          icon="account-group"
+          onPress={() => handleNavigateToListUser()}
+        />
       </Categories>
     </Container>
   );

@@ -1,15 +1,19 @@
+import {ItemSelect} from '../screens';
 import {Bullet} from './Bullet';
 import {Button} from './Button';
 import {CategoryCard} from './CategoryCard';
+import {CategoryList} from './CategoryList';
 import {ClientCard} from './ClientCard';
 import {Header} from './Header';
 import {ImageSlide} from './ImageSlide';
 import {Input} from './Input';
 import {InputPassword} from './InputPassword';
-import {ListClient} from './ListClient';
-import {ListProduct} from './ListProduct';
+import {ItemSelectButton} from './ItemSelectButton';
+import {ListCard} from './ListCard';
+
+import {Loading} from './Loading';
+import {PreviewImages} from './PreviewImages';
 // import {ListUser} from './ListUser';
-import {ProductCard} from './ProductCard';
 import {RegisterButton} from './RegisterButton';
 import {SectionTitle} from './SectionTitle';
 
@@ -21,11 +25,13 @@ export {
   ImageSlide,
   Input,
   InputPassword,
-  ProductCard,
   RegisterButton,
   Header,
   SectionTitle,
-  ListClient,
-  ListProduct,
-  // ListUser,
+  ItemSelect,
+  ItemSelectButton,
+  Loading,
+  PreviewImages,
+  CategoryList,
+  ListCard,
 };

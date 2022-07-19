@@ -3,7 +3,6 @@ import FastImage from 'react-native-fast-image';
 import styled from 'styled-components/native';
 
 export const Container = styled.View``;
-export const Images = styled.FlatList``;
 export const Indexes = styled.View`
   flex-direction: row;
   justify-content: center;
