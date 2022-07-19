@@ -22,7 +22,7 @@ Para o desenvolvimento do aplicativo foram utilizadas as seguintes bibliotecas:
 - [react-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)
 - [axios](https://axios-http.com/docs/intro)
 - [react-navigation](https://reactnavigation.org/)
-- [useform](https://useform.io/)
+- [react-hook-form](https://react-hook-form.com/api/useform/)
 - [yup](https://www.npmjs.com/package/yup)
 - [eslint](https://eslint.org/)
 - [prettier](https://prettier.io/)
