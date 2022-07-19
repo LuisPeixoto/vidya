@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "383236471703",
+    "project_id": "vidya-d948d",
+    "storage_bucket": "vidya-d948d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383236471703:android:62339695a18dca0937e2d2",
+        "android_client_info": {
+          "package_name": "com.vidya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383236471703-5rscasj4d2o4o8o5ls80et6qrtlfbcpi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vidya",
+            "certificate_hash": "ed92aaa91d5ed1f826cbdacfc4dcc6a20dd03fcc"
+          }
+        },
+        {
+          "client_id": "383236471703-s000i8bhkbb8s0qgh1vq1n7c1mfivr5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9TZTjz6if2nc4juxJeKiytt4gj95aJ5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383236471703-s000i8bhkbb8s0qgh1vq1n7c1mfivr5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
