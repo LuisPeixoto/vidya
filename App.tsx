@@ -1,8 +1,14 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {ThemeProvider} from 'styled-components';
+import {Routes} from './src/routes';
+import theme from './src/styles/theme';
 
 const App = () => {
-  return <Text>Hello World</Text>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Routes />
+    </ThemeProvider>
+  );
 };
 
 export default App;
