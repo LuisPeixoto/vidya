@@ -6,24 +6,27 @@ import {
   Client,
   ClientRegister,
   Home,
-  ItemSelect,
+  List,
+  ListUser,
+  ListUserByProduct,
   Login,
   Product,
   ProductRegister,
+  RegistrationCompleted,
+  SelectRegistrationCategory,
   Signup,
   UserRegister,
 } from '../screens';
-import {ListProducts} from '../screens/ListProducts';
-import {ListClients} from '../screens/ListClients';
 
 export function AppRoutes() {
   const {Navigator, Screen} = createStackNavigator();
   const theme = useTheme();
   return (
     <Navigator
-      initialRouteName="UserRegister"
+      initialRouteName="Login"
       screenOptions={{
         headerShown: true,
+        cardStyle: {backgroundColor: theme.colors.white},
         headerBackTitleVisible: false,
         cardShadowEnabled: false,
         headerTitleAlign: 'center',
@@ -60,20 +63,6 @@ export function AppRoutes() {
           headerShown: false,
         }}
       />
-      <Screen
-        name="ListProducts"
-        options={{
-          title: 'Produtos',
-        }}
-        component={ListProducts}
-      />
-      <Screen
-        name="ListClients"
-        options={{
-          title: 'Clientes',
-        }}
-        component={ListClients}
-      />
 
       <Screen name="Product" component={Product} />
       <Screen name="Client" component={Client} />
@@ -91,8 +80,47 @@ export function AppRoutes() {
         }}
         component={ProductRegister}
       />
-      <Screen name="ItemSelect" component={ItemSelect} />
-      <Screen name="UserRegister" component={UserRegister} />
+      <Screen
+        name="UserRegister"
+        component={UserRegister}
+        options={{
+          title: 'Cadastro de Usuário',
+        }}
+      />
+
+      <Screen
+        name="ListUser"
+        component={ListUser}
+        options={{
+          title: 'Selecione um cliente',
+        }}
+      />
+
+      <Screen
+        name="ListUserByProduct"
+        component={ListUserByProduct}
+        options={{
+          title: 'Usuários',
+        }}
+      />
+
+      <Screen
+        name="RegistrationCompleted"
+        component={RegistrationCompleted}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Screen
+        name="SelectRegistrationCategory"
+        component={SelectRegistrationCategory}
+        options={{
+          title: 'Selecione a categoria de cadastro',
+        }}
+      />
+
+      <Screen name="List" component={List} />
     </Navigator>
   );
 }

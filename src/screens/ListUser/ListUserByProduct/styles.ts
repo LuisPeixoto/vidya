@@ -5,7 +5,7 @@ export const Container = styled.View`
   padding: 0 16px;
 `;
 
-export const Clients = styled.FlatList.attrs({
+export const Products = styled.SectionList.attrs({
   showsVerticalScrollIndicator: false,
   contentContainerStyle: {
     paddingTop: 16,

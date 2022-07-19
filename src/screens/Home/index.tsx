@@ -1,58 +1,66 @@
-import React from 'react';
-import {Header, ListProduct, ListClient, ListUser} from '../../components';
-import {SectionTitle} from '../../components/SectionTitle';
-import {Container, Content, Section} from './styles';
+import {useFocusEffect, useNavigation} from '@react-navigation/native';
+import React, {useCallback, useState} from 'react';
+import {Header, CategoryList, Loading, RegisterButton} from '../../components';
+import {getData} from '../../database';
+
+import {Container, List} from './styles';
 
 export function Home() {
-  const DATA = [
-    {
-      title: 'Cliente',
-      data: [
-        {
-          title: 'Quitandaria dadsadd das ds dadasdd',
-          urlImage:
-            'https://mlabs-s3-blog.s3.amazonaws.com/wp-content/uploads/2021/05/18090940/teste-ab-header.jpg',
-        },
-        {
-          title: 'Cliente 2',
-          urlImage:
-            'https://quatrorodas.abril.com.br/wp-content/uploads/2020/12/chevrolet-2021-onix-premier-8389-e1607978189472.jpg?quality=70&strip=info',
-        },
-        {
-          title: 'Cliente 2',
-          urlImage:
-            'https://quatrorodas.abril.com.br/wp-content/uploads/2020/12/chevrolet-2021-onix-premier-8389-e1607978189472.jpg?quality=70&strip=info',
-        },
-      ],
-    },
+  const [data, setData] = useState<any>([]);
+  const [loading, setLoading] = useState(false);
+  const navigation = useNavigation();
 
-    {
-      title: 'Desserts',
-      data: [
-        {title: 'Cliente 1', description: 'Cliente 1', version: '1.0.0'},
-        {title: 'Cliente 1', description: 'Cliente 1', version: '1.0.0'},
-      ],
-    },
-  ];
+  function handleRegister() {
+    navigation.navigate('SelectRegistrationCategory');
+  }
+
+  function loadData() {
+    setLoading(true);
+    try {
+      Promise.all([
+        getData({collection: 'clients', limit: 4}),
+        getData({collection: 'products', limit: 4}),
+      ]).then(([clientsData, productsData]) => {
+        setData([
+          {
+            title: 'Clientes',
+            data: clientsData,
+          },
+          {
+            title: 'Produtos',
+            data: productsData,
+          },
+        ]);
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useFocusEffect(
+    useCallback(() => {
+      loadData();
+    }, []),
+  );
+
   return (
-    <Container>
-      <Content>
-        <Header />
-        <Section>
-          <SectionTitle title="Clientes" optionLoadMore />
-          <ListClient data={DATA[0].data} />
-        </Section>
-
-        <Section>
-          <SectionTitle title="Produtos" optionLoadMore />
-          <ListProduct data={DATA[1].data} />
-        </Section>
-
-        <Section>
-          <SectionTitle title="Usuários" optionLoadMore />
-          <ListUser data={DATA[1].data} />
-        </Section>
-      </Content>
-    </Container>
+    <>
+      <Container>
+        <List
+          ListHeaderComponent={() => <Header />}
+          data={data}
+          keyExtractor={item => item.title}
+          renderItem={({item, index}) => {
+            return (
+              <CategoryList key={index} title={item.title} data={item.data} />
+            );
+          }}
+        />
+        <RegisterButton onPress={() => handleRegister()} />
+      </Container>
+      {loading && <Loading />}
+    </>
   );
 }

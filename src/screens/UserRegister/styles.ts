@@ -21,7 +21,7 @@ export const ContainerButton = styled.View`
   width: 100%;
   position: absolute;
   padding: 24px 16px 32px 16px;
-  background-color: ${({theme}) => theme.colors.grayLight};
+  background-color: ${({theme}) => theme.colors.backgroundCard};
   bottom: 0;
   z-index: 1;
 `;

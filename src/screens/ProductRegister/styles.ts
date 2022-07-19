@@ -11,18 +11,19 @@ export const Form = styled.ScrollView.attrs({
     paddingBottom: 150,
   },
 })`
-  padding: 32px 16px;
+  padding: 32px 0;
 `;
 
 export const Section = styled.View`
   margin-bottom: 16px;
+  padding: 0 16px;
 `;
 
 export const ContainerButton = styled.View`
   width: 100%;
   position: absolute;
   padding: 24px 16px 32px 16px;
-  background-color: ${({theme}) => theme.colors.grayLight};
+  background-color: ${({theme}) => theme.colors.backgroundCard};
   bottom: 0;
   z-index: 1;
 `;
