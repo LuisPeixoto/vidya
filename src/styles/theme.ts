@@ -1,4 +1,5 @@
 export default {
+  
   colors: {
     backgroundCard: '#ECECEC',
     primary: '#5B4486',
