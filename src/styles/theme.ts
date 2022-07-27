@@ -1,6 +1,5 @@
 export default {
-  
-  colors: {
+    colors: {
     backgroundCard: '#ECECEC',
     primary: '#5B4486',
     primaryLight: '#6B5692',
